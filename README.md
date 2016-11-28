@@ -1,5 +1,7 @@
-# generator-webpack-2-typescript [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> 
+# generator-webpack-2-typescript 
+
+[![Build Status](https://secure.travis-ci.org/GaryB432/generator-webpack-2-typescript.png?branch=master)](https://travis-ci.org/GaryB432/generator-webpack-2-typescript)
+[![npm version](https://badge.fury.io/js/generator-webpack-2-typescript.svg)](http://badge.fury.io/js/generator-webpack-2-typescript)
 
 ## Installation
 
