@@ -24,6 +24,7 @@ module.exports = yeoman.Base.extend({
 
   writing: {
     app: function () {
+      this.fs.copy(this.templatePath("_gitignore"), this.destinationPath(".gitignore"));
       this.fs.copy(this.templatePath("_vscode/settings.json"), this.destinationPath(".vscode/settings.json"));
       this.fs.copy(this.templatePath("_vscode/tasks.json"), this.destinationPath(".vscode/tasks.json"));
       this.fs.copy(this.templatePath("karma-shim.js"), this.destinationPath("karma-shim.js"));

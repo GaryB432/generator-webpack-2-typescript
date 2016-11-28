@@ -11,6 +11,7 @@ describe('generator-webpack-2-typescript:app', function () {
 
   it('creates files', function () {
     assert.file([
+      '.gitignore',
       '.vscode/settings.json',
       '.vscode/tasks.json',
       'karma-shim.js',
