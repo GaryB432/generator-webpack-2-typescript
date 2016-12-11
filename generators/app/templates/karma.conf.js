@@ -4,6 +4,9 @@ var webpack = require("webpack");
 var webpackConfig = require('./webpack.config');
 var path = require("path");
 
+var ENV = process.env.npm_lifecycle_event;
+var isTestWatch = ENV === 'test-watch';
+
 var configSettings = {
 	"normal": {},
 	"uglified": {
@@ -70,7 +73,7 @@ module.exports = function (config) {
 
 
 		// enable / disable watching file and executing tests whenever any file changes
-		autoWatch: true,
+		autoWatch: false,
 
 
 		// Start these browsers, currently available:
@@ -81,8 +84,8 @@ module.exports = function (config) {
 		// - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
 		// - PhantomJS
 		// - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-		browsers: ['Chrome'],
-
+    browsers: ['Chrome'],
+		 
 
 		// If browser does not capture in given timeout [ms], kill it
 		captureTimeout: 60000,
@@ -90,7 +93,7 @@ module.exports = function (config) {
 
 		// Continuous Integration mode
 		// if true, it capture browsers, run tests and exit
-		singleRun: false,
+		singleRun: true,
 
 
 		// List plugins explicitly, since autoloading karma-webpack

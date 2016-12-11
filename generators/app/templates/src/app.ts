@@ -1,5 +1,3 @@
-import "ts-helpers";
-
 import { Greeter } from "./greeter";
 
 const greeter: Greeter = new Greeter("Hello, world!");
