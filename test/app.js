@@ -3,13 +3,13 @@ var path = require('path');
 var assert = require('yeoman-assert');
 var helpers = require('yeoman-test');
 
-describe('generator-webpack-2-typescript:app', function () {
-  before(function () {
+describe('generator-webpack-2-typescript:app', () => {
+  before(() => {
     return helpers.run(path.join(__dirname, '../generators/app'))
-      .toPromise();
+      .withPrompts({someAnswer: true});
   });
 
-  it('creates files', function () {
+  it('creates files', () => {
     assert.file([
       '.gitignore',
       '.vscode/settings.json',

@@ -6,7 +6,7 @@ module.exports = {
     outputPath: path.join(__dirname, 'dist'),
     colors: false
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   entry: {
     app: ['./src/app.ts']
   },
@@ -21,15 +21,15 @@ module.exports = {
         test: /\.ts$/,
         loader: 'tslint-loader'
       }
-    ],
+    ]
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   plugins: [
-    new CopyWebpackPlugin([{ from: 'src/public' }])],
+    new CopyWebpackPlugin([{from: 'src/public'}])],
   resolve: {
     extensions: ['.ts']
   }
-}
+};
