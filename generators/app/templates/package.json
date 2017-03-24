@@ -4,7 +4,7 @@
   "description": "<%= appname %>",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --no-inline",
+    "start": "webpack-dev-server --hot --inline",
     "build": "webpack",
     "test": "karma start",
     "test-watch": "karma start --no-single-run --auto-watch"
