@@ -28,7 +28,7 @@ module.exports = class extends Generator {
     this.fs.copy(this.templatePath('tsconfig.json'), this.destinationPath('tsconfig.json'));
     this.fs.copy(this.templatePath('tslint.json'), this.destinationPath('tslint.json'));
     this.fs.copy(this.templatePath('webpack.config.js'), this.destinationPath('webpack.config.js'));
-    this.fs.copy(this.templatePath('src/app.ts'), this.destinationPath('src/app.ts'));
+    this.fs.copyTpl(this.templatePath('src/app.ts'), this.destinationPath('src/app.ts'), {appname: Case.kebab(this.cwd)});
     this.fs.copy(this.templatePath('src/greeter.spec.ts'), this.destinationPath('src/greeter.spec.ts'));
     this.fs.copy(this.templatePath('src/greeter.ts'), this.destinationPath('src/greeter.ts'));
     this.fs.copy(this.templatePath('src/public/index.html'), this.destinationPath('src/public/index.html'));
