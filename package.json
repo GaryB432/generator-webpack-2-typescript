@@ -1,6 +1,6 @@
 {
   "name": "generator-webpack-2-typescript",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "A minimal Yeoman Generator for creating websites with TypeScript and Webpack2",
   "author": {
     "name": "Gary Bortosky",

@@ -18,13 +18,20 @@ describe('generator-webpack-2-typescript:app', () => {
       'karma.conf.js',
       'package.json',
       'README.md',
-      'src/app.ts',
-      'src/greeter.spec.ts',
-      'src/greeter.ts',
       'src/public/index.html',
+      'src/scripts/app.ts',
+      'src/scripts/greeter.spec.ts',
+      'src/scripts/greeter.ts',
+      'src/styles/base.scss',
       'tsconfig.json',
       'tslint.json',
-      'webpack.config.js'
+      'webpack.config.js',
+      'webpack/dev-server.js',
+      'webpack/entry.js',
+      'webpack/module.js',
+      'webpack/output.js',
+      'webpack/plugins.js',
+      'webpack/resolve.js'
     ]);
   });
 });

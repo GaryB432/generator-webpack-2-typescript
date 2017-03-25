@@ -1,0 +1,8 @@
+
+div {
+  background-color: green;
+  padding: 10px;
+  &.greeting{
+    border: 10px solid cornflowerblue
+  }
+}
