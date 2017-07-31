@@ -18,7 +18,7 @@ module.exports = function (config) {
     // list of preprocessors
     preprocessors: {
       './karma-shim.js': ['webpack'],
-      './src/**/*.ts': ['webpack', 'coverage']
+      './src/**/*.ts': ['webpack']
     },
 
     webpack: webpackConfig,
@@ -31,15 +31,7 @@ module.exports = function (config) {
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['spec', 'coverage'],
-
-    coverageReporter: {
-      dir: 'coverage/',
-      reporters: [
-        {type: 'text-summary'},
-        {type: 'html'}
-      ]
-    },
+    reporters: ['spec'],
 
     // web server port
     port: 9876,
@@ -77,7 +69,6 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-spec-reporter'),
       require('karma-chrome-launcher'),
-      require('karma-coverage'),
       require('karma-webpack')
     ]
   });

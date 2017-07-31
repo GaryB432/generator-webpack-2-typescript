@@ -9,7 +9,6 @@ var ENV = process.env.npm_lifecycle_event;
 var isProd = ENV === 'build';
 
 module.exports = [
-  new webpack.ProgressPlugin(),
 
   new HtmlWebpackPlugin({
     template: 'public/index.html',
@@ -21,5 +20,5 @@ module.exports = [
     disable: !isProd
   }),
 
-  new CopyWebpackPlugin([{from: 'public'}])
+  new CopyWebpackPlugin([{ from: 'public' }])
 ];

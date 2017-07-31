@@ -4,4 +4,7 @@ import { Greeter } from "./greeter";
 
 const greeter: Greeter = new Greeter("<%= appname %>");
 
-document.getElementById("greeting").innerHTML = greeter.greet();
+const el = document.getElementById("greeting");
+if (el) {
+  el.innerHTML = greeter.greet();
+}

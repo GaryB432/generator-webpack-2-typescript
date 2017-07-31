@@ -5,4 +5,4 @@ export class Greeter {
   public greet(): string {
     return "<h1>" + this.greeting + "</h1>";
   }
-};
+}
