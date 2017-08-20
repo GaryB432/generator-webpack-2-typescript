@@ -1,6 +1,6 @@
 {
   "name": "generator-webpack-2-typescript",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "A minimal Yeoman Generator for creating websites with TypeScript and Webpack3",
   "author": {
     "name": "Gary Bortosky",
@@ -14,7 +14,7 @@
   "keywords": [
     "yeoman-generator",
     "typescript",
-    "webpack2"
+    "webpack"
   ],
   "dependencies": {
     "case": "^1.5.1",
@@ -38,7 +38,11 @@
   },
   "eslintConfig": {
     "extends": "xo-space",
-    "rules":{"linebreak-style": ["off"]},
+    "rules": {
+      "linebreak-style": [
+        "off"
+      ]
+    },
     "env": {
       "mocha": true
     }
