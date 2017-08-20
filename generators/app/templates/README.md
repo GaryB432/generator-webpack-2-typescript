@@ -5,7 +5,7 @@
 npm install
 ```
 
-## Run Webpack
+## Run webpack
 ```
 npm run build
 ```

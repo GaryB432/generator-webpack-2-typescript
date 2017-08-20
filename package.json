@@ -1,6 +1,6 @@
 {
   "name": "generator-webpack-2-typescript",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A Yeoman Generator for creating websites with TypeScript and Webpack",
   "author": {
     "name": "Gary Bortosky",
@@ -36,7 +36,7 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublish": "nsp check",
+    "prepare": "nsp check",
     "pretest": "eslint . --fix",
     "test": "jest"
   },
