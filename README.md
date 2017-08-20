@@ -3,9 +3,7 @@
 [![Build Status](https://secure.travis-ci.org/GaryB432/generator-webpack-2-typescript.png?branch=master)](https://travis-ci.org/GaryB432/generator-webpack-2-typescript)
 [![npm version](https://badge.fury.io/js/generator-webpack-2-typescript.svg)](http://badge.fury.io/js/generator-webpack-2-typescript)
 
-Generate a scaffold project using [TypeScript](https://www.typescriptlang.org/) and [Webpack](https://webpack.github.io/).
-
-> The project says Webpack 2 but it works fine with 2+
+Generate a scaffold project using [TypeScript](https://www.typescriptlang.org/) and [webpack](https://webpack.github.io/).
 
 ## Installation
 
