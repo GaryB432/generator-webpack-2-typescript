@@ -2,7 +2,9 @@
   "version": "0.1.0",
   "command": "npm",
   "isShellCommand": true,
-  "args": ["run"],
+  "args": [
+    "run"
+  ],
   "showOutput": "always",
   "tasks": [
     {

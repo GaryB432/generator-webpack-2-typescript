@@ -19,5 +19,5 @@ module.exports = [
     disable: !isProd
   }),
 
-  new CopyWebpackPlugin([{ from: 'public' }])
+  new CopyWebpackPlugin([{from: 'public'}])
 ];

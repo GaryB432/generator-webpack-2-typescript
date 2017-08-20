@@ -5,17 +5,17 @@ var webpackConfig = require('./webpack.config');
 module.exports = function (config) {
   config.set({
 
-    // base path, that will be used to resolve files and exclude
+    // Base path, that will be used to resolve files and exclude
     basePath: '',
-    // frameworks to use
+    // Frameworks to use
     frameworks: ['jasmine'],
 
-    // list of files / patterns to load in the browser
+    // List of files / patterns to load in the browser
     files: [
       './karma-shim.js'
     ],
 
-    // list of preprocessors
+    // List of preprocessors
     preprocessors: {
       './karma-shim.js': ['webpack'],
       './src/**/*.ts': ['webpack']
@@ -29,21 +29,21 @@ module.exports = function (config) {
       }
     },
 
-    // test results reporter to use
+    // Test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
     reporters: ['spec'],
 
-    // web server port
+    // Web server port
     port: 9876,
 
-    // enable / disable colors in the output (reporters and logs)
+    // Enable / disable colors in the output (reporters and logs)
     colors: true,
 
-    // level of logging
+    // Level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_INFO,
 
-    // enable / disable watching file and executing tests whenever any file changes
+    // Enable / disable watching file and executing tests whenever any file changes
     autoWatch: false,
 
     // Start these browsers, currently available:

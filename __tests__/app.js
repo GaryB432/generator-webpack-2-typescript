@@ -4,7 +4,7 @@ var assert = require('yeoman-assert');
 var helpers = require('yeoman-test');
 
 describe('generator-webpack-2-typescript:app', () => {
-  before(() => {
+  beforeAll(() => {
     return helpers.run(path.join(__dirname, '../generators/app'))
       .withPrompts({someAnswer: true});
   });
