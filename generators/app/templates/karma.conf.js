@@ -2,36 +2,45 @@
 
 var webpackConfig = require('./webpack.config');
 
-module.exports = function (config) {
+module.exports = function(config) {
   config.set({
-
     // Base path, that will be used to resolve files and exclude
     basePath: '',
     // Frameworks to use
     frameworks: ['jasmine'],
 
     // List of files / patterns to load in the browser
-    files: [
-      './karma-shim.js'
-    ],
+    files: ['./karma-shim.js'],
 
     // List of preprocessors
     preprocessors: {
       './karma-shim.js': ['webpack'],
-      './src/**/*.ts': ['webpack']
+      './src/**/*.ts': ['webpack'],
     },
 
     webpack: webpackConfig,
 
     webpackMiddleware: {
       stats: {
-        colors: true
-      }
+        colors: true,
+      },
     },
 
     // Test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['spec'],
+    reporters: ['spec', 'junit'],
+
+    junitReporter: {
+      outputDir: 'results', // Results will be saved as $outputDir/$browserName.xml
+      outputFile: undefined, // If included, results will be saved as $outputDir/$browserName/$outputFile
+      suite: '<%= appname %>', // Suite will become the package name attribute in xml testsuite element
+      useBrowserName: true, // Add browser name to report and classes names
+      nameFormatter: undefined, // Function (browser, result) to customize the name attribute in xml testcase element
+      classNameFormatter: undefined, // Function (browser, result) to customize the classname attribute in xml testcase element
+      properties: {
+        funLevel: 'maximum',
+      }, // Key value pair of properties to add to the <properties> section of the report
+    },
 
     // Web server port
     port: 9876,
@@ -68,8 +77,9 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-spec-reporter'),
+      require('karma-junit-reporter'),
       require('karma-chrome-launcher'),
-      require('karma-webpack')
-    ]
+      require('karma-webpack'),
+    ],
   });
 };

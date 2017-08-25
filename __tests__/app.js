@@ -5,8 +5,9 @@ var helpers = require('yeoman-test');
 
 describe('generator-webpack-2-typescript:app', () => {
   beforeAll(() => {
-    return helpers.run(path.join(__dirname, '../generators/app'))
-      .withPrompts({someAnswer: true});
+    return helpers
+      .run(path.join(__dirname, '../generators/app'))
+      .withPrompts({ someAnswer: true });
   });
 
   it('creates files', () => {
@@ -31,7 +32,7 @@ describe('generator-webpack-2-typescript:app', () => {
       'webpack/module.js',
       'webpack/output.js',
       'webpack/plugins.js',
-      'webpack/resolve.js'
+      'webpack/resolve.js',
     ]);
   });
 });

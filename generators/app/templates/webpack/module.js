@@ -6,16 +6,19 @@ module.exports = {
   rules: [
     {
       test: /\.ts$/,
-      loader: 'ts-loader'
+      loader: 'ts-loader',
     },
     {
       enforce: 'pre',
       test: /\.ts$/,
-      loader: 'tslint-loader'
+      loader: 'tslint-loader',
     },
     {
       test: /\.scss$/,
-      loader: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader!sass-loader'})
-    }
-  ]
+      loader: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: 'css-loader!sass-loader',
+      }),
+    },
+  ],
 };

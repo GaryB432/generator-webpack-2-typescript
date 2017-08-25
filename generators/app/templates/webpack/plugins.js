@@ -8,16 +8,15 @@ var ENV = process.env.npm_lifecycle_event;
 var isProd = ENV === 'build';
 
 module.exports = [
-
   new HtmlWebpackPlugin({
     template: 'public/index.html',
-    chunksSortMode: 'dependency'
+    chunksSortMode: 'dependency',
   }),
 
   new ExtractTextPlugin({
     filename: 'css/[name].[hash].css',
-    disable: !isProd
+    disable: !isProd,
   }),
 
-  new CopyWebpackPlugin([{from: 'public'}])
+  new CopyWebpackPlugin([{ from: 'public' }]),
 ];

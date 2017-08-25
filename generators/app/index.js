@@ -11,8 +11,8 @@ module.exports = class extends Generator {
     this.log(
       yosay(
         'Welcome to the minimal ' +
-        chalk.red('Webpack TypeScript') +
-        ' generator!'
+          chalk.red('Webpack TypeScript') +
+          ' generator!'
       )
     );
 
@@ -22,7 +22,7 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    const context = {appname: Case.kebab(this.cwd)};
+    const context = { appname: Case.kebab(this.cwd) };
     this.fs.copy(
       this.templatePath('_vscode/settings.json'),
       this.destinationPath('.vscode/settings.json')
@@ -84,9 +84,10 @@ module.exports = class extends Generator {
       this.templatePath('karma-shim.js'),
       this.destinationPath('karma-shim.js')
     );
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath('karma.conf.js'),
-      this.destinationPath('karma.conf.js')
+      this.destinationPath('karma.conf.js'),
+      context
     );
     this.fs.copyTpl(
       this.templatePath('package.json'),
@@ -113,6 +114,6 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.installDependencies({npm: true, bower: false, yarn: false});
+    this.installDependencies({ npm: true, bower: false, yarn: false });
   }
 };
