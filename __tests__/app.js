@@ -27,12 +27,6 @@ describe('generator-webpack-2-typescript:app', () => {
       'tsconfig.json',
       'tslint.json',
       'webpack.config.js',
-      'webpack/dev-server.js',
-      'webpack/entry.js',
-      'webpack/module.js',
-      'webpack/output.js',
-      'webpack/plugins.js',
-      'webpack/resolve.js',
     ]);
   });
 });

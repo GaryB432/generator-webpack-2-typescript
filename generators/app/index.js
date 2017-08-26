@@ -38,8 +38,8 @@ module.exports = class extends Generator {
     this.log(
       yosay(
         'Welcome to the minimal ' +
-        chalk.red('Webpack TypeScript') +
-        ' generator!'
+          chalk.red('Webpack TypeScript') +
+          ' generator!'
       )
     );
 
@@ -114,7 +114,7 @@ module.exports = class extends Generator {
       this.templatePath('webpack.config.js'),
       this.destinationPath('webpack.config.js')
     );
-    this._copyWebpack();
+    // This._copyWebpack();
   }
 
   install() {
