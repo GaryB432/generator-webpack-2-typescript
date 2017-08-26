@@ -6,13 +6,40 @@ const path = require('path');
 const Case = require('case');
 
 module.exports = class extends Generator {
+  _copyWebpack() {
+    this.fs.copy(
+      this.templatePath('webpack/dev-server.js'),
+      this.destinationPath('webpack/dev-server.js')
+    );
+    this.fs.copy(
+      this.templatePath('webpack/entry.js'),
+      this.destinationPath('webpack/entry.js')
+    );
+    this.fs.copy(
+      this.templatePath('webpack/module.js'),
+      this.destinationPath('webpack/module.js')
+    );
+    this.fs.copy(
+      this.templatePath('webpack/output.js'),
+      this.destinationPath('webpack/output.js')
+    );
+    this.fs.copy(
+      this.templatePath('webpack/plugins.js'),
+      this.destinationPath('webpack/plugins.js')
+    );
+    this.fs.copy(
+      this.templatePath('webpack/resolve.js'),
+      this.destinationPath('webpack/resolve.js')
+    );
+  }
+
   initializing() {
     // Have Yeoman greet the user.
     this.log(
       yosay(
         'Welcome to the minimal ' +
-          chalk.red('Webpack TypeScript') +
-          ' generator!'
+        chalk.red('Webpack TypeScript') +
+        ' generator!'
       )
     );
 
@@ -53,30 +80,6 @@ module.exports = class extends Generator {
       this.destinationPath('src/styles/base.scss')
     );
     this.fs.copy(
-      this.templatePath('webpack/dev-server.js'),
-      this.destinationPath('webpack/dev-server.js')
-    );
-    this.fs.copy(
-      this.templatePath('webpack/entry.js'),
-      this.destinationPath('webpack/entry.js')
-    );
-    this.fs.copy(
-      this.templatePath('webpack/module.js'),
-      this.destinationPath('webpack/module.js')
-    );
-    this.fs.copy(
-      this.templatePath('webpack/output.js'),
-      this.destinationPath('webpack/output.js')
-    );
-    this.fs.copy(
-      this.templatePath('webpack/plugins.js'),
-      this.destinationPath('webpack/plugins.js')
-    );
-    this.fs.copy(
-      this.templatePath('webpack/resolve.js'),
-      this.destinationPath('webpack/resolve.js')
-    );
-    this.fs.copy(
       this.templatePath('_gitignore'),
       this.destinationPath('.gitignore')
     );
@@ -111,6 +114,7 @@ module.exports = class extends Generator {
       this.templatePath('webpack.config.js'),
       this.destinationPath('webpack.config.js')
     );
+    this._copyWebpack();
   }
 
   install() {
