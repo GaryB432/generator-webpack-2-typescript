@@ -5,6 +5,10 @@
 
 Generate a scaffold project using [TypeScript](https://www.typescriptlang.org/) and [webpack](https://webpack.github.io/).
 
+# Update
+
+## For the latest updates, please the [newer version](https://github.com/GaryB432/generator-webpack-ts/) of this generator.
+
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-webpack-2-typescript using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
@@ -30,13 +34,3 @@ yo webpack-2-typescript
 ## License
 
 ISC © [Gary Bortosky]()
-
-
-[npm-image]: https://badge.fury.io/js/generator-webpack-2-typescript.svg
-[npm-url]: https://npmjs.org/package/generator-webpack-2-typescript
-[travis-image]: https://travis-ci.org/GaryB432/generator-webpack-2-typescript.svg?branch=master
-[travis-url]: https://travis-ci.org/GaryB432/generator-webpack-2-typescript
-[daviddm-image]: https://david-dm.org/GaryB432/generator-webpack-2-typescript.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/GaryB432/generator-webpack-2-typescript
-[coveralls-image]: https://coveralls.io/repos/GaryB432/generator-webpack-2-typescript/badge.svg
-[coveralls-url]: https://coveralls.io/r/GaryB432/generator-webpack-2-typescript
